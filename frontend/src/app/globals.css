@@ -1,1 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&family=Play:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 @import "tailwindcss";  
+
+/* Global font stack to better match the reference site */
+html, body { 
+  font-family: 'Jura', 'Open Sans', 'Helvetica', Arial, sans-serif;
+}
+
+.font-jura { font-family: 'Jura', 'Open Sans', 'Helvetica', Arial, sans-serif; }
+.font-play { font-family: 'Play', 'Jura', 'Open Sans', 'Helvetica', Arial, sans-serif; }
+
+
+/* container-max to match Wix site width */
+.container-max{
+	max-width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+/* general light site colors to match the reference */
+body{background-color: #ffffff; color: #333333}

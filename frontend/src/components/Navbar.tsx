@@ -2,114 +2,98 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+    <header className="sticky top-0 z-30 border-b border-gray-200 bg-white/90 backdrop-blur">
       <nav className="container-max flex items-center justify-between py-4">
-        {/* Logo */}
+        
+        {/* LEFT: Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-500 text-sm font-bold text-white shadow-soft">
-            C
-          </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-semibold tracking-tight">
-              Compayre
-            </span>
-            <span className="text-[11px] text-slate-400">
-              Executive Pay Intelligence
-            </span>
-          </div>
+          <Image
+            src="/assets/iias/logo.avif"
+            width={42}
+            height={42}
+            alt="Compayre"
+            className="h-10 w-auto"
+          />
         </Link>
 
-        {/* Desktop links */}
-        <div className="hidden items-center gap-6 md:flex">
-          <Link
-            href="/about"
-            className="text-sm text-slate-300 hover:text-white"
-          >
-            About
-          </Link>
-          <Link
-            href="/analysis"
-            className="text-sm text-slate-300 hover:text-white"
-          >
-            Product
-          </Link>
-          <Link
-            href="/contact"
-            className="text-sm text-slate-300 hover:text-white"
-          >
-            Contact
-          </Link>
+        {/* CENTER: Navigation Links */}
+
+<div className="hidden md:flex flex-1 justify-center gap-10">
+  {["About", "Dashboard", "Demo", "Contact"].map((item) => {
+    const href =
+      item === "Dashboard" ? "/analysis" : `/${item.toLowerCase()}`;
+
+    return (
+      <Link
+        key={item}
+        href={href}
+        className="group relative text-base md:text-lg font-semibold text-gray-800 hover:text-gray-900 transition"
+      >
+        {item}
+        <span
+          className="absolute left-0 -bottom-1.5 h-[3px] w-0 bg-teal-500 transition-all duration-300 group-hover:w-full"
+        ></span>
+      </Link>
+    );
+  })}
+</div>
+
+
+
+        {/* RIGHT: Buttons */}
+        <div className="hidden items-center gap-3 md:flex">
           <Link
             href="/login"
-            className="rounded-full bg-slate-900 px-3 py-1.5 text-sm text-slate-100 shadow-sm shadow-slate-900/60 hover:bg-slate-800"
+            className="rounded-full border border-gray-300 px-4 py-1.5 md:text-lg font-semibold text-gray-800 hover:bg-gray-50 transition"
           >
             Log in
           </Link>
           <Link
             href="/signup"
-            className="rounded-full bg-brand-500 px-4 py-1.5 text-sm font-medium text-white shadow-soft hover:bg-brand-600"
+            className="rounded-full bg-teal-500 px-5 py-1.5 md:text-lg font-semibold text-white hover:bg-teal-700 transition"
           >
-            Get started
+            Get Started
           </Link>
         </div>
 
-        {/* Mobile burger */}
+        {/* Mobile hamburger */}
         <button
-          className="inline-flex items-center rounded-md border border-slate-700 p-1.5 text-slate-200 md:hidden"
-          onClick={() => setOpen((prev) => !prev)}
-          aria-label="Toggle navigation"
+          className="inline-flex items-center rounded-md border border-gray-200 p-1.5 text-gray-700 md:hidden"
+          onClick={() => setOpen(!open)}
         >
-          <span className="sr-only">Open menu</span>
-          <div className="space-y-1">
-            <span className="block h-0.5 w-5 bg-slate-200" />
-            <span className="block h-0.5 w-5 bg-slate-200" />
-          </div>
+          <span className="h-0.5 w-5 bg-gray-700 block mb-1"></span>
+          <span className="h-0.5 w-5 bg-gray-700 block"></span>
         </button>
       </nav>
 
-      {/* Mobile menu */}
+      {/* MOBILE MENU */}
       {open && (
-        <div className="border-t border-slate-800 bg-slate-950 md:hidden">
-          <div className="container-max flex flex-col gap-2 py-3">
-            <Link
-              href="/about"
-              onClick={() => setOpen(false)}
-              className="text-sm text-slate-200"
-            >
-              About
-            </Link>
-            <Link
-              href="/analysis"
-              onClick={() => setOpen(false)}
-              className="text-sm text-slate-200"
-            >
-              Product
-            </Link>
-            <Link
-              href="/contact"
-              onClick={() => setOpen(false)}
-              className="text-sm text-slate-200"
-            >
-              Contact
-            </Link>
-            <div className="mt-2 flex gap-2">
+        <div className="border-t border-gray-200 bg-white md:hidden">
+          <div className="container-max flex flex-col gap-2 py-3 text-sm">
+            <Link href="/about" onClick={() => setOpen(false)}>About</Link>
+            <Link href="/analysis" onClick={() => setOpen(false)}>Dashboard</Link>
+            <Link href="/demo" onClick={() => setOpen(false)}>Demo</Link>
+            <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
+
+            <div className="mt-3 flex gap-2">
               <Link
                 href="/login"
                 onClick={() => setOpen(false)}
-                className="flex-1 rounded-full bg-slate-900 px-3 py-1.5 text-center text-sm text-slate-100"
+                className="flex-1 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-center"
               >
                 Log in
               </Link>
               <Link
                 href="/signup"
                 onClick={() => setOpen(false)}
-                className="flex-1 rounded-full bg-brand-500 px-4 py-1.5 text-center text-sm font-medium text-white"
+                className="flex-1 rounded-full bg-teal-500 px-4 py-1.5 text-center font-medium text-white"
               >
                 Get started
               </Link>

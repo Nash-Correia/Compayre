@@ -13,10 +13,16 @@ const config: Config = {
         brand: {
           50: "#f5f7ff",
           100: "#e6ebff",
-          500: "#3b82f6",
-          600: "#2563eb",
-          700: "#1d4ed8",
+          500: "#00B9E8",
+          600: "#0192BF",
+          700: "#00758D",
         },
+        site: {
+          text: '#606060',
+          muted: '#a8a8a8',
+          light: '#f7f7f8',
+          border: '#e6e6e6'
+        }
       },
       boxShadow: {
         soft: "0 18px 45px rgba(15, 23, 42, 0.12)",
