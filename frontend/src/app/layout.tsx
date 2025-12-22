@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Compayre – Executive Pay Intelligence",
   description:
-    "Compayre helps investors and boards compare executive compensation against peers with clear, data-backed insights.",
+    "Compayre helps investors and executive directors compare executive compensation against peers with clear, data-backed insights.",
 };
 
 export default function RootLayout({

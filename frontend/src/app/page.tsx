@@ -21,7 +21,7 @@ export default function HomePage() {
                   COMPENSATION ANALYTICS
                 </h1>
                 <p className="mt-4 text-base text-gray-300 sm:text-lg">
-                  Search and analyse compensation data for 1300+ directors
+                  Search and analyse compensation data for 1300+ executive directors
                 </p>
 
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -84,7 +84,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600">
-                      Remuneration data for 500+ companies and 1300+ directors across five years
+                      Remuneration data for 500+ companies and 1300+ executive directors across five years
                     </p>
                   </div>
                 </div>
@@ -140,7 +140,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600">
-                      Check if the proposed pay for a director is in line with identified pay scales
+                      Check if the proposed pay for an executive director is in line with identified pay scales
                     </p>
                   </div>
                 </div>
@@ -330,7 +330,7 @@ export default function HomePage() {
                 <div className="p-6 space-y-4 min-h-[300px]">
                   <div className="text-gray-600 text-sm">Market trends</div>
                   <div className="text-gray-600 text-sm">Company pay data</div>
-                  <div className="text-gray-600 text-sm">Director pay data</div>
+                  <div className="text-gray-600 text-sm">Executive director pay data</div>
                   <div className="text-gray-600 text-sm">Compare salaries</div>
                   <div className="h-16"></div>
                 </div>
@@ -338,7 +338,7 @@ export default function HomePage() {
                   <div className="text-xs font-medium">For Voting Advisory Subscribers</div>
                 </div>
                 <div className="p-6 text-center">
-                  <button className="text-gray-400">
+                  <button type="button" aria-label="View pricing details" title="View pricing details" className="text-gray-400">
                     <svg className="w-12 h-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -361,17 +361,17 @@ export default function HomePage() {
                 <div className="p-6 space-y-4 min-h-[300px]">
                   <div className="text-gray-600 text-sm">Market trends</div>
                   <div className="text-gray-600 text-sm">Company pay data</div>
-                  <div className="text-gray-600 text-sm">Director pay data</div>
+                  <div className="text-gray-600 text-sm">Executive director pay data</div>
                   <div className="text-gray-600 text-sm">Compare salaries</div>
                   <div className="text-gray-600 text-sm">Tranparency Index</div>
                   <div className="text-gray-600 text-sm">Proposed pay scores</div>
                   <div className="text-gray-600 text-sm">Advanced search filters</div>
                 </div>
                 <div className="bg-red-400 text-white text-center py-3">
-                  <div className="text-xs font-medium">For Board Pay Committees</div>
+                  <div className="text-xs font-medium">For Executive Director Pay Committees</div>
                 </div>
                 <div className="p-6 text-center">
-                  <button className="text-gray-400">
+                  <button aria-label="View pricing details" title="View pricing details" className="text-gray-400">
                     <svg className="w-12 h-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 9l-7 7-7-7" />
                     </svg>

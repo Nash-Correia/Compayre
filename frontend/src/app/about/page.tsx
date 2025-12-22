@@ -11,14 +11,14 @@ export default function AboutPage() {
           About Compayre
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-gray-600 sm:text-base">
-          Compayre is built for investors, proxy advisors and boards who need a
+          Compayre is built for investors, proxy advisors and executive directors who need a
           clear, data-backed view of executive remuneration. Instead of
           manually stitching together numbers from annual reports, we give you a
           structured, comparable view in a few clicks.
         </p>
 
         <p className="mt-4 max-w-2xl text-sm text-gray-600 sm:text-base">
-          The product roadmap includes company deep dives, director-level
+          The product roadmap includes company deep dives, executive director-level
           histories, peer comparisons and portfolio-wide dashboards, delivered
           in small, shippable iterations so you see value from day one.
         </p>

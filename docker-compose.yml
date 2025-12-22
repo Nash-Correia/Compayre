@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  compayre-app:
+    build: .
+    ports:
+      - "8000:8000"  # Django backend
+      - "3000:3000"  # Next.js frontend
+    volumes:
+      - ./backend:/app/backend
+      - ./frontend:/app/frontend
+    environment:
+      - NODE_ENV=production
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped

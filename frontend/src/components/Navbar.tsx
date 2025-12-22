@@ -28,7 +28,7 @@ export function Navbar() {
 <div className="hidden md:flex flex-1 justify-center gap-10">
   {["About", "Dashboard", "Demo", "Contact"].map((item) => {
     const href =
-      item === "Dashboard" ? "/analysis" : `/${item.toLowerCase()}`;
+      item === "Dashboard" ? "/dashboard" : `/${item.toLowerCase()}`;
 
     return (
       <Link
@@ -65,8 +65,10 @@ export function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="inline-flex items-center rounded-md border border-gray-200 p-1.5 text-gray-700 md:hidden"
+          type="button"
+          className="inline-flex items-center rounded-md border border-gray-200 p-1.5 text-gray-700 md:hidden focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
           onClick={() => setOpen(!open)}
+          aria-label="Toggle navigation menu"
         >
           <span className="h-0.5 w-5 bg-gray-700 block mb-1"></span>
           <span className="h-0.5 w-5 bg-gray-700 block"></span>
@@ -78,7 +80,7 @@ export function Navbar() {
         <div className="border-t border-gray-200 bg-white md:hidden">
           <div className="container-max flex flex-col gap-2 py-3 text-sm">
             <Link href="/about" onClick={() => setOpen(false)}>About</Link>
-            <Link href="/analysis" onClick={() => setOpen(false)}>Dashboard</Link>
+            <Link href="/dashboard" onClick={() => setOpen(false)}>Dashboard</Link>
             <Link href="/demo" onClick={() => setOpen(false)}>Demo</Link>
             <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
 
